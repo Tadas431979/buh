@@ -6,16 +6,18 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-html, body{
-    background-color:yellow;
-    color:#636b6f;
-    font-family:'Raleway',sent-serif;
-    font-weight:100;
-    height:100vh;
-    margin:0;
-}
+//html, body{
+//    background-color:yellow;
+//    color:#636b6f;
+//    font-family:'Raleway',sent-serif;
+//    font-weight:100;
+//    height:100%;
+//    weight:100%;
+//    margin:0;
+//}
 .fs-4{
     float:center;
+    margin-left: 250px;
 }
 #main{
     border: 5px solid darkblue;
@@ -23,6 +25,53 @@ html, body{
     width: 850px;
 }
 #app{
-    border: 3px solid darkblue;
+
     float:right;
+    width:30%;
+
+}
+#list{
+
+    text-align: center;
+    margin: 0 auto;
+}
+#bill{
+    width:25%;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1;
+    border: 2px;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+    font-family:helvetica-roman;
+}
+#basic-addon1{
+    width: 25%;
+}
+basic-addon2{
+    width:10px ;
+    text-align: center;
+}
+.container-1{
+display:flex;
+flex-direction: column;
+}
+.container-1 div{
+  padding:10px;
+    border: 1px solid silver;
+}
+.box-1{
+flex:1;
+border: 2px;
+}
+box-2{
+flex:2;
+
+}
+.title{
+  font-size: 30px;
+}
+.titleh{
+    text-align: center;
 }
