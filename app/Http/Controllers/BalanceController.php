@@ -28,10 +28,13 @@ class BalanceController extends Controller
         $this->middleware('auth');
         $date1=$require->post('date1');
         $date2=$require->post('date2');
-        $data['data']=Data::all()
-        ->sortBy('date_value')
-        ->where('date_value',$date1<'date_value',$date2);
-        //dd($data);
-        return $data;
+        $data['data']=DB::table('data')
+            ->join('bills','bills.id','data.type')
+            ->whereBetween('date_value',[$date1,$date2])
+            ->orderBy('date_value')
+            ->get();
+       // dd($data);
+        return view('balance.all',$data);
+
     }
 }
