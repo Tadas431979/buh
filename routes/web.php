@@ -27,3 +27,7 @@ Route::post('/update',[App\Http\Controllers\DataController::class, 'store'])->na
 Route::get('/show',[App\Http\Controllers\DataController::class, 'show'])->name('show');
 Route::get('edit/{id}',[App\Http\Controllers\DataController::class, 'edit'])->name('edit');
 Route::post('update_bill{id}',[App\Http\Controllers\DataController::class, 'update'])->name('update_bill');
+Route::get('/plan',[App\Http\Controllers\PlanController::class, 'index'])->name('plan');
+Route::post('/planStore',[App\Http\Controllers\PlanController::class, 'store'])->name('planStore');
+Route::get('/balance',[App\Http\Controllers\BalanceController::class, 'create'])->name('balance');
+Route::post('/createAll',[App\Http\Controllers\BalanceController::class, 'createAll'])->name('createAll');

@@ -71,6 +71,7 @@ class DataController extends Controller
      */
     public function show(Data $data)
     {
+
         $data['data']=Data::all();
         //dd($data);
         return view('data.show',$data);

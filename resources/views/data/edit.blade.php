@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    @include('include.succes')
+@include('include.succes')
 
     <form class="form" action="{{route('update_bill',$updBill->id)}}" method="POST">
             @csrf
@@ -15,7 +15,7 @@
             } );
         </script>
 
-            <li class="list-group-item">{{$updBill->relation->name}}</li>
+            <li class="list-group-item">{{$updBill->relation->bill_name}}</li>
             <input type="hidden" name="type"value="{{$updBill->type}}">
 
             <div class="input-group input-group-sm mb-3">

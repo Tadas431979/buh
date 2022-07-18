@@ -18,7 +18,7 @@
         <header >
                 <span class="fs-4">Buhalterine programa</span>
         </header>
-        <div id="app">
+        <div id="app2">
             <nav id="name"class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -40,7 +40,7 @@
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                 @endif
-                                bla bla bla
+
                                 @if (Route::has('register'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -80,7 +80,7 @@
                 <li class="nav-item"><a href="{{route('home')}}" class="nav-link active" aria-current="page">Pagindinis</a></li>
                 <li class="nav-item"><a href="{{route('full')}}" class="nav-link">Sąskaitų pildymas</a></li>
                 <li class="nav-item"><a href="{{route('show')}}" class="nav-link">Sąskaitų peržiūra </a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Balansas</a></li>
+                <li class="nav-item"><a href="{{ route('bills') }}" class="nav-link">sukurti saskaita</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">mažytė ataskaita</a></li>
             </ul>
     </header>
