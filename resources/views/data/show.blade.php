@@ -5,25 +5,34 @@
 
 
         <div>
-            <h1> Pajamos</h1>
+            <h2 class="subtitle">Pajamos</h2>
+
             @foreach($data as $updBill)
                 @if($updBill->relation->bill_type=='inn')
-                    <ul class="list-group">
-                        <li class="list-group-item">SĄSKAITOS PAVADINIMAS-{{$updBill->relation->bill_name}} SUMA-{{$updBill->value}} IRAŠO DATA-{{$updBill->date_value}}</li>
+                <div class="row invoice-list-item">
+                    <div class="col-md-8">
+                        <label>SĄSKAITOS PAVADINIMAS-{{$updBill->relation->bill_name}} SUMA-{{$updBill->value}} IRAŠO DATA-{{$updBill->date_value}}</label>
+                    </div>
+                    <div class="col-md-4">   
                         <a href="{{route('edit',$updBill->id)}}">edit</a>
-                    </ul>
+                    </div>
+                </div>
                 @endif
             @endforeach
         </div>
 
         <div>
-            <h1> Išlaidos</h1>
+            <h2 class="subtitle">Išlaidos</h2>
             @foreach($data as $updBill)
                 @if($updBill->relation->bill_type=='out')
-                    <ul class="list-group">
-                        <li class="list-group-item">SĄSKAITOS PAVADINIMAS-{{$updBill->relation->bill_name}} SUMA-{{$updBill->value}} IRAŠO DATA- {{$updBill->date_value}}</li>
-                        <a href="{{route('edit',$updBill->id)}}">edit</a>
-                    </ul>
+                <div class="row invoice-list-item">
+                    <div class="col-md-8">
+                            <label>SĄSKAITOS PAVADINIMAS-{{$updBill->relation->bill_name}} SUMA-{{$updBill->value}} IRAŠO DATA- {{$updBill->date_value}}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="{{route('edit',$updBill->id)}}">edit</a>
+                            </div>
+                </div>
                 @endif
             @endforeach
         </div>

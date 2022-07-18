@@ -19,16 +19,16 @@
             <input type="hidden" name="type"value="{{$updBill->type}}">
 
             <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">iveskite pinigų sumą</span>
-                </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text">iveskite pinigų sumą</span>
+            </div>
                 <input type="integer" name="value" value="{{$updBill->value}}" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
             </div>
 
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Sąskaitos komentaras</span>
-                </div>
+            <div class="input-group-prepend">
+                <span class="input-group-text big-comment">Sąskaitos komentaras</span>
+            </div>
                 <textarea name="comment" class="form-control" aria-label="With textarea">{{$updBill->comment}}</textarea>
             </div>
             <input type="submit" class="btn btn-primary" value="Create">

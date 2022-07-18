@@ -3,40 +3,41 @@
     @include('include.succes')
 
     <body>
-    <div class="container-1">
+    <div class="">
         <div class="box-1">
             <form class="form" action="{{route('billStore')}}"  method="POST">
                 @csrf
-                <select id="bill" class="form-select" name="bill_type" aria-label="sąskaitos tipas">
+                <select class="form-select" name="bill_type" aria-label="sąskaitos tipas">
                     <option selected>sąskaitos tipas</option>
                     <option value="inn">pajamos</option>
                     <option value="out">Islaidos</option>
                 </select>
-                <span class="input-group-text" id="basic-addon1">Irasykite saskaitos pavadinima</span>
-                <input  type="text" class="name" name="bill_name" >
-
+                <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Irasykite saskaitos pavadinima</span>
+            </div>
+                <input type="integer" name="bill_name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
                 <input type="submit" class="btn btn-primary" value="Create">
             </form>
         </div>
-        <div class="box-2" >
+        <div class="box-2 list-bills" >
 
             <div class="titleh"><h1 class="title">Saskaitu sarasas</h1></div>
-            <h3>  pajamos</h3>
+            <h2>  pajamos</h2>
             <ul>
                 @foreach($bill_list as $bill)
                     @if ($bill->bill_type=='inn')
-                        <li><a>{{$bill->bill_name}}</a></li>
+                        <li>{{$bill->bill_name}}</li>
                     @endif
                 @endforeach
             </ul>
 
-            <h1>islaidos</h1>
+            <h2>islaidos</h2>
             <ul>
                 @foreach($bill_list as $bill)
                     @if ($bill->bill_type=='out')
-                        <tr>
-                            <li><h5>{{$bill->bill_name}}</h5></li>
-                        </tr>
+                            <li>{{$bill->bill_name}}</li>
                     @endif
                 @endforeach
             </ul>

@@ -1,11 +1,11 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 //html, body{
 //    background-color:yellow;
 //    color:#636b6f;
@@ -15,28 +15,23 @@
 //    weight:100%;
 //    margin:0;
 //}
-.fs-4{
-    float:center;
+.fs-4 {
+    float: center;
     margin-left: 250px;
 }
-#main{
-    border: 5px solid darkblue;
-    height: 150px;
-    width: 850px;
+
+.page-title {
+    padding: 15px;
+    color: #0d468b;
+    font-size: 20px;
 }
-#app2{
 
-    float:right;
-    width:30%;
-
-}
-#list{
-
+#list {
     text-align: center;
     margin: 0 auto;
 }
-#bill{
-    width:25%;
+#bill {
+    width: 25%;
     padding: 5px;
     font-size: 15px;
     line-height: 1;
@@ -44,45 +39,109 @@
     border-radius: 0;
     height: 34px;
     -webkit-appearance: none;
-    font-family:helvetica-roman;
+    font-family: helvetica-roman;
 }
-#basic-addon1{
+#basic-addon1 {
     width: 25%;
 }
-basic-addon2{
-    width:10px ;
+basic-addon2 {
+    width: 10px;
     text-align: center;
 }
-.container-1{
-display:flex;
-flex-direction: column;
+.container-1 {
+    display: flex;
+    flex-direction: column;
 }
-.container-1 div{
-  padding:10px;
+.container-1 div {
+    padding: 10px;
     border: 1px solid silver;
 }
-.box-1{
-flex:1;
-border: 2px;
+.box-1 {
+    flex: 1;
+    border: 2px;
 }
-box-2{
-flex:2;
-
+box-2 {
+    flex: 2;
 }
-.title{
-  font-size: 30px;
+.title {
+    font-size: 30px;
 }
-.titleh{
+.titleh {
     text-align: center;
 }
-#inputGroup-sizing-sm{
+#inputGroup-sizing-sm {
     background: gold;
     width: 200px;
     height: 50px;
 }
-#sum{
+#sum {
     background: gold;
     width: 200px;
     height: 50px;
-    margin-right:150px;
+    margin-right: 150px;
+}
+
+.list-group {
+    a {
+        margin: 15px;
+        text-transform: uppercase;
+    }
+}
+
+.stretched-link::after {
+    display: none !important;
+}
+
+.form {
+    input,
+    select {
+        margin: 15px 0;
+        width: 100%;
+    }
+}
+
+.input-group-text {
+    margin: 15px 0;
+}
+
+.subtitle {
+    margin: 15px 0;
+}
+
+.row.invoice-list-item {
+    background: white;
+    border: 1px grey solid;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.big-comment {
+    height: 100%;
+    margin-top: 0px;
+}
+
+.list-bills {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background: white;
+        border: 1px solid grey;
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
+
+#inputGroup-sizing-sm {
+    background-color: #e9ecef;
+    width: 200px;
+    height: 50px;
+}
+
+#sum {
+    background: white;
+    width: 200px;
+    height: 50px;
+    margin-right: 150px;
 }

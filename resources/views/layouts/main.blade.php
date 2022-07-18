@@ -13,24 +13,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
-<div class="container">
     <div class="container"id="main">
-        <header >
-                <span class="fs-4">Buhalterine programa</span>
-        </header>
         <div id="app2">
             <nav id="name"class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <h1 class="page-title">Buhalterine programa</h1>
                 <div class="container">
                     <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav me-auto">
-
-                        </ul>
-
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
@@ -73,7 +64,6 @@
 
         </header>
     </div>
-    </div>
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <ul class="nav nav-pills">
@@ -86,7 +76,9 @@
     </header>
 </div>
 <body>
-@yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 
 
 </body>
